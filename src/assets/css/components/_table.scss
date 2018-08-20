@@ -1,0 +1,263 @@
+.table_layout{
+	width: 100%;
+
+	.dx-datagrid {
+    color: #333;
+    background-color: transparent;
+	}
+}
+.panel-primary{
+	border: none;
+}
+
+#gridContainer{
+
+	thead{
+		tr{
+			td{
+				width: auto;
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				width: auto;
+			}
+		}
+	}
+}
+
+//TABLE AND SUB TABLE STYLES //////////////////////
+
+.table_content_background{
+	
+	.table_panel_control{
+		float: right;
+		ul{
+			margin:0px;
+			padding: 0px;
+			li{
+				float: left;
+				list-style: none;
+				margin: 10px;
+				a{
+					font-size: 1.3em;
+				}
+			}
+		}
+	}
+	.our_table {
+	    display: table;
+	     border: 0.5px solid #CCC;
+	     border-bottom: none;
+	     border-top: none;
+	    white-space: nowrap;
+
+	    .our_row{
+
+	    	.our_cell {
+			    display: table-cell;
+			    text-align: center;
+				border-left: 0.5px solid #CCC;
+				overflow: hidden;
+    			text-overflow: ellipsis; 
+
+			    &:last-child{
+				    border-right: 0.5px solid #CCC;
+				}			
+
+
+			}
+			.small_cell {
+			    min-width: 120px;
+			}
+			.intermedium_cell {
+				min-width: 150px;
+			}
+
+			.medium_cell {
+				min-width: 200px;
+				max-width: 200px;
+			}
+			.large_cell{
+				min-width: 300px;
+				max-width: 300px;
+			}
+			.long_cell {
+				min-width: 400px;
+				max-width: 400px;
+				
+			}
+			.padding-10{
+				padding: 10px;
+			}
+	    }
+
+	    .active_row {
+	        background: rgba(47 , 166 , 30 , 0.27 );
+	    }
+
+	    .xs-cell {
+	        min-width: 75px;
+	    }
+	     .active_check {
+	         background: rgba(157 , 232 , 119 , 0.95);
+	    }
+	     .button_check {
+	       border : 0.5px solid grey
+
+	    }
+	}
+
+
+	.heading{
+	    text-align: center;
+	    padding: 5px;
+	    background-color: #e5e5e5;
+	    border-bottom: 1px solid #ddd;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    color: #959595;
+	}
+
+	.wrapper_table {
+	    width: inherit;
+	    background-color: #DADFE1
+
+	}
+	.wrapper_table table tr {
+	    border-bottom: 0.5px solid #CCC;
+	}
+	.wrapper_table table tr td{
+	    padding: 10px;
+	}
+	.wrapper_table table th{
+	    padding: 10px;
+	}
+
+}
+
+// END TABLE AND SUB TABLE STYLES //////////////////////
+
+// ofpromociones-content  /////////////////////////////
+
+table tr td, table th {
+	min-width: 150px;
+    text-align: center;
+	border-left: 0.5px solid #CCC;
+	padding: 5px;
+}
+.initial_column {
+	min-width: 75px !important;
+}
+
+table thead {
+	background-color: #e5e5e5;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #959595;
+}
+
+button {
+	cursor: pointer;
+}
+
+.active_row {
+	 background: rgba(47 , 166 , 30 , 0.27 );
+}
+.button_check {
+   border : 0.5px solid grey
+
+}
+
+.active_check {
+    background: rgba(157 , 232 , 119 , 0.95);
+}
+/****   TABLA SIMPLE    ****/
+.spinner {
+
+}
+
+.btn-filter {
+        background-color: inherit;
+        width: 100%;
+        height: 100%;
+        margin-right: 10px;
+        border: none;
+        line-height: normal;
+
+}
+
+.float_right {
+    float: right;
+}
+
+.dropdown-menu {
+    width: 250px;
+    padding: 10px;
+}
+
+.input-filter {
+    float: left;
+    display: inline-block;
+    width: 85%;
+}
+
+.addon-filter {
+    display: inline-block;
+font-size: 20px;
+width: 40px;
+}
+
+/******* LÍNEA DE BOTONES   *******/
+.dropdown-menu-Reg {
+    min-width: 80px;
+    width: 90px;
+    padding: 0px;
+}
+.dropdown-menu-Reg>li>a:hover, .dropdown-menu-Reg>li>a:focus {
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #c3c3c3;
+}
+
+.lineaSeparacionBtnTabla{
+	border-top: 1px ridge #cccccc;
+	padding-top: 15px;
+	margin-top: 15px;
+	text-align: center;
+}
+.filtered {
+	color: #4caf50;
+}
+#nuevafactibilidad{
+	table{
+		border: 1px solid #CCC;
+	}
+}
+#modal-large{
+	.modal-dialog{
+		top: 5%;
+	}
+	.padding-horiz-tabla{
+		padding: 0px 30px;
+	}
+}
+.table-content {
+    max-height: 500px;
+    min-width: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.table-override-content {    
+	white-space: nowrap;
+    overflow: auto;
+    max-height: 300px;
+}
+.table-content-fixer {
+    max-height: 320px;
+	overflow-x: scroll;
+	border-right: 0.5px solid #CCC;
+  }

@@ -1,0 +1,13 @@
+#nuevoLegal{
+	.form-group label {
+        padding-bottom: 8px;
+        padding-left: 8px;
+    }
+    .text-observ>textarea{
+    	resize: none;
+    }
+    .text-desc>textarea{
+    	resize: none; 
+    	height: 175px
+    }
+}

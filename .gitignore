@@ -1,0 +1,16 @@
+dist/
+.idea/
+node_modules/
+bower_components/
+documents/
+*.orig
+npm-debug.log
+.project
+src/assets/css/.sass-cache/*
+.DS_Store
+build/
+cv-catalogo.iml
+.settings/
+.bowerrc
+.vscode/
+

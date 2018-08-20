@@ -1,0 +1,99 @@
+.tarjeta-promocion{
+  .tarjeta{
+    .titulo{
+      &:before{
+        @include tituloTarjeta("Promocion");
+      }
+    }
+    .contenido{
+      &:before{
+        @include contenidoTarjeta("+ Agregar, editar, eliminar");
+      }
+    }
+    &:hover{
+      -webkit-box-shadow: 0px 0px 10px #34495e;
+      box-shadow: 5px 5px 30px #34495e;
+    }
+  }
+}
+
+.tarjeta-producto{
+  .tarjeta{
+    .titulo{
+      &:before{
+        @include tituloTarjeta("Producto");
+      }
+    }
+    .contenido{
+      &:before{
+        @include contenidoTarjeta("+ Agregar, editar, eliminar");
+      }
+    }
+    &:hover{
+      -webkit-box-shadow: 0px 0px 10px #34495e;
+      box-shadow: 5px 5px 30px #34495e;
+    }
+  }
+}
+
+.tarjeta-plancomercial{
+  .tarjeta{
+    .titulo{
+      &:before{
+        @include tituloTarjeta("Plan comercial");
+      }
+    }
+    .contenido{
+      &:before{
+        @include contenidoTarjeta("+ Informe");
+      }
+    }
+    &:hover{
+      -webkit-box-shadow: 0px 0px 10px #34495e;
+      box-shadow: 5px 5px 30px #34495e;
+    }
+  }
+}
+
+.tarjeta-abmpolitica{
+  .tarjeta{
+    .titulo{
+      &:before{
+        @include tituloTarjeta("Callejero");
+      }
+    }
+    .simbolo{
+      &:before{
+        @include simboloTarjeta(fa-usd);
+      }
+    }
+    .contenido{
+      &:before{
+        @include contenidoTarjeta("+ Informe");
+      }
+    }
+    &:hover{
+      -webkit-box-shadow: 0px 0px 10px #34495e;
+      box-shadow: 5px 5px 30px #34495e;
+    }
+  }
+}
+
+.tarjeta-ventas{
+  .tarjeta{
+    .titulo{
+      &:before{
+        @include tituloTarjeta("VENTAS");
+      }
+    }
+    .contenido{
+      &:before{
+        @include contenidoTarjeta("+ Informe");
+      }
+    }
+    &:hover{
+      -webkit-box-shadow: 0px 0px 10px #34495e;
+      box-shadow: 5px 5px 30px #34495e;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+body {
+    line-height: 0px;
+}
+    header{
+	background-color: #000;
+	color:#fff;
+	display: inline-block;
+	line-height: 0px;
+	width: 100%;
+
+	img{
+		width: 130px;
+	}
+	label{
+		float: right;
+	    font-size: 0.8em;
+	    line-height: 5;
+	    margin-right: 15px;
+	    font-style: italic;
+	    color:#929292;
+
+	    .profile_icon{
+	    	margin-right: 10px;
+	    	color: rgb(233, 30, 99);
+	    	font-size: 1.3em;
+	    }
+	}
+	ul{
+		list-style: none;
+		display: block;
+	}
+	li{
+		float: left;
+    	list-style: none;
+    	margin: 0px;
+	}
+	.top-9{
+		margin-top: 9px;
+	}
+	.boton5{
+		border-left: 1px solid #fff;
+	    padding: 21px 0 0 3px;
+	    height: 66px;
+	    width: 66px;
+	    color: #fff;
+	    text-align: center;
+	}
+	.cabeceraRight{
+		display: inline-block;
+		margin: 10px 0px 0 0;
+	    color: #fff;
+	    text-align: center;
+	    float: right;
+	    list-style: none;
+	}
+	.icoUsurio{
+    	padding: 12px 0 0 0px;
+	    height: 66px;
+	    width: 66px;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    font-size: 1.5em;
+	    color: #fff;
+	    text-align: center;
+    }
+	.datosUsuario{
+		padding: 4px 0 0 0px;
+		display: inline-block;
+	    text-align: left;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+	.nombreyApe{
+    	display: inline;
+	    font-size: .9em;
+	    color: #f2f2f2;
+    }
+    .tipo {
+    	margin-top: -8px;
+	    font-size: .8em;
+	    color: #ccc;
+	}
+	.margin-left-20{
+		margin-left: 40px;
+	}
+	.catalogoTitulo span{
+		color: #d67f00;
+	}
+}
