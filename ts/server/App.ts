@@ -29,7 +29,7 @@ class App {
 
   // Inicia ruteador.
     private routes(): void {
-        this.express.use(Interceptor.intercept);
+        // this.express.use(Interceptor.intercept);
         this.express.use('/pathweb', express.static(path.join(__dirname, 'public')));
         Router.init(express);
         Health.init(express);

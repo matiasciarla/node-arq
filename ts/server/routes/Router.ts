@@ -9,6 +9,9 @@ class Router {
     public init(express: any) {
         this.routes = express.Router();
 
+        this.routes.route('/clients')
+        .get(QueryController.getClients)
+        .post(AbmController.createClient);
                
 
     }

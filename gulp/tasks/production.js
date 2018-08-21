@@ -181,10 +181,10 @@ gulp.task('start', [config.nodejs.name], function(){
 		ext: 'js',
 		env: {
 			'NODE_ENV': 'development',
-			'user': '',
-			'password': '',
-			'host': '',
-			'port': '3306'
+			'user': 'admin',
+			'password': 'Admin_123',
+			'host': 'localhost',
+			'port': '3300'
 		}
 	});
 

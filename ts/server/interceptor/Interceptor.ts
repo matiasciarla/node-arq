@@ -16,7 +16,6 @@ class Interceptor {
             JwtUtils.verify(token, (decoded:any) => {
                 console.log('========================= DECODE ======================');
                 console.log(decoded);
-                req.user = '' + decoded.firstName + ' ' + decoded.lastName;
                 next();
             }, (err:any) => {
                 console.log('========================= ERROR ======================');
