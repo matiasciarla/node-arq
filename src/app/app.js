@@ -1,7 +1,6 @@
 (function() {
 	angular
 		.module('app', [
-			'dx',
 			'ngRoute',
 			'ngSanitize',
 			'angular-jwt'

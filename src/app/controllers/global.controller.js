@@ -3,9 +3,9 @@
 		.module('app')
 		.controller('GlobalController', GlobalController);
 
- 	GlobalController.$inject = ['baseService', 'collapseFactory', 'modalFactory' , 'hostnameFactory', '$window'];
+ 	GlobalController.$inject = ['baseService'];
 
-	function GlobalController(baseService, collapseFactory, modalFactory, hostnameFactory, $window) {
+	function GlobalController(baseService) {
 		let vm = this;
 
 		vm.init = init;
