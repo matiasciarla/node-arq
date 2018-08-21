@@ -184,7 +184,7 @@ gulp.task('start', [config.nodejs.name], function(){
 			'user': 'admin',
 			'password': 'Admin_123',
 			'host': 'localhost',
-			'port': '3300'
+			'port': '3306'
 		}
 	});
 
