@@ -1,6 +1,4 @@
-import QueryController from '../controllers/QueryController';
-import AbmController from '../controllers/AbmController';
-import LoginController from '../controllers/LoginController';
+import Controller from '../controllers/Controller';
 
 class Router {
 
@@ -10,8 +8,8 @@ class Router {
         this.routes = express.Router();
 
         this.routes.route('/clients')
-        .get(QueryController.getClients)
-        .post(AbmController.createClient);
+        .get(Controller.getClients)
+        .post(Controller.createClient);
                
 
     }
