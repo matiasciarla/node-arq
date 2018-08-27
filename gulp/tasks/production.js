@@ -162,7 +162,7 @@ gulp.task('startProd', [config.nodejs.name], function(){
 
 
 gulp.task('prod', function(callback){
-	runSequence(config.clean.name, ['scripts'], 'startProd', callback);
+	runSequence(config.clean.name, ['scripts'], callback);
 });
 
 gulp.task('dev', function(callback){
