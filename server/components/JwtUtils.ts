@@ -5,12 +5,8 @@ class JwtUtils {
     private secret:string = 'secret_123#';
     private expires:number = 86400; // expires in 24 hours
 
-    public generateToken: Function = (firstName:string, lastName:string, grupo:string):string => {
+    public generateToken: Function = ():string => {
         let claims:any = {};
-        claims.firstName = firstName;
-        claims.lastName = lastName;
-        claims.grupo = grupo;
-
 
         let token:string = jwt.sign(claims, this.secret, {
             expiresIn: this.expires

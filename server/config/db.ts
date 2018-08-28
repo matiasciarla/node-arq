@@ -1,8 +1,6 @@
 let Sequelize = require('sequelize');
 
 class EntityManager {
-
-    
     
     public connection = new Sequelize('node-arq', process.env.user, process.env.password, {
         host    : process.env.host,
