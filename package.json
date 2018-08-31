@@ -37,7 +37,9 @@
     "typescript": "^2.8.1"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "docker-local": "python3 local.py",
+    "deploy": "python3 deploy.py"
   },
   "author": "",
   "license": "ISC"
