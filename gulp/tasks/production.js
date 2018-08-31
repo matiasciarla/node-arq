@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 	plumber = require("gulp-plumber"),
 	babel = require('gulp-babel'),
 	nodemon = require('gulp-nodemon'),
-	ts = require('gulp-typescript');;
+	ts = require('gulp-typescript');
 
 
 var config = require('../config');
@@ -142,7 +142,7 @@ gulp.task('startHomo', [config.nodejs.name], function(){
 
 gulp.task('startProd', [config.nodejs.name], function(){
 	var stream = nodemon({
-		exec: 'node --inspect',
+		exec: 'node',
 		script: 'dist/server.js',
 		ext: 'js',
 		env: {
