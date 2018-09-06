@@ -39,6 +39,7 @@
   "scripts": {
     "start": "gulp",
     "docker-local": "python3 local.py",
+    "docker-push": "python3 push.py",
     "deploy": "python3 deploy.py"
   },
   "author": "",

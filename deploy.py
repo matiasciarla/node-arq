@@ -17,25 +17,12 @@ parser.add_argument('--tag', help='tag de la imagen')
 parser.add_argument('--beta', help='version beta de la imagen')
 
 args=parser.parse_args()
-os.system("python3 local.py --tag=" + args.tag)
-proc = os.popen("docker images -q " + dockerHub + "/" + container + ":" + args.tag).read()
 
 if args.tag != None and args.beta != None :
-
-    if len(proc) > 0:
-        pswd = input('User Docker:')
-        usr = getpass.getpass('Password:')
-        resp = os.popen("docker login -u " + pswd + " -p " + usr).read()
-
-        if "Login Succeeded" not in resp :
-            print("Usuario o password de DockerHub incorrectos")
-        else :
-            os.system("docker push " + dockerHub + "/" + container + ":" + args.tag)
-            os.system("git tag " + args.tag + "-BETA." + args.beta)
-            os.system("git push origin " + args.tag + "-BETA." + args.beta)
-        
-    else :
-        print("No existe la imagen con el tag ingresado")
+    os.system("python3 local.py --tag=" + args.tag)
+    os.system("python3 push.py --tag=" + args.tag + ' --beta=' + args.beta)
+    os.system("git tag " + args.tag + "-BETA." + args.beta)
+    os.system("git push origin " + args.tag + "-BETA." + args.beta)
 
 
 else: 
