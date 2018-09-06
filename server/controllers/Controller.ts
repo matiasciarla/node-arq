@@ -1,23 +1,22 @@
 import ClientService from "../service/ClientService";
+import ResponseUtils from "../components/ResponseUtils";
 
 
 class Controller {
 
 	public createClient:Function = (req:any, res:any) => {
         ClientService.createClient(req.body, (response:any) => {
-            res.send(response);
+            ResponseUtils.sendCreate(res);
         }, (err:any) => {
-            res.status(500);
-            res.send(err);
+            ResponseUtils.sendInternalError(res, err);
         });        
     }
 
     public getClients:Function = (req:any, res:any) => {
         ClientService.getClients((response:any) => {
-            res.send(response);
+            ResponseUtils.sendGenericSuccess(response);
         }, (err:any) => {
-            res.status(500);
-            res.send(err);
+            ResponseUtils.sendInternalError(res, err);
         });
     }
 
