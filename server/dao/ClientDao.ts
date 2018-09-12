@@ -4,7 +4,7 @@ import IndexModels from '../models/IndexModels';
 
 class ClientDao {
 
-    private indexModels:any;
+    private indexModels:IndexModels;
 
     constructor(){
         this.indexModels = new IndexModels();

@@ -6,7 +6,6 @@ class IndexModels {
 
     public client:any;
 
-
     constructor(){
         this.client = new Client().client;
     }

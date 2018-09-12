@@ -4,7 +4,7 @@ import ResponseUtils from "../components/ResponseUtils";
 
 class Controller {
 
-    private clientService:any;
+    private clientService:ClientService;
 
     constructor(){
         this.clientService = new ClientService();

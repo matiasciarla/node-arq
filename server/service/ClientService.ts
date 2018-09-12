@@ -2,7 +2,7 @@ import ClientDao from '../dao/ClientDao';
 
 class ClientService {
 
-    private clientDao:any;
+    private clientDao:ClientDao;
 
     constructor(){
         this.clientDao = new ClientDao();
