@@ -2,8 +2,14 @@ import ClientDao from '../dao/ClientDao';
 
 class ClientService {
 
+    private clientDao:any;
+
+    constructor(){
+        this.clientDao = new ClientDao();
+    }
+
     public getClients:Function = (callback:Function, callbackError:Function) => {
-        ClientDao.getClients((response:any) => {
+        this.clientDao.getClients((response:any) => {
             callback(response);
         }, (err:any) => {
             callbackError(err);
@@ -11,7 +17,7 @@ class ClientService {
     }
 
     public createClient:Function = (client:any, callback:Function, callbackError:Function) => {
-        ClientDao.createClient(client, (response:any) => {
+        this.clientDao.createClient(client, (response:any) => {
             callback(response);
         }, (err:any) => {
             callbackError(err);
@@ -19,4 +25,4 @@ class ClientService {
     }
 }
 
-export default new ClientService();
+export default ClientService;

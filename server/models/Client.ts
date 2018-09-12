@@ -20,4 +20,4 @@ class Client {
     }
 }
 
-export default new Client().client;
+export default Client;

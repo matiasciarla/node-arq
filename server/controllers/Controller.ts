@@ -4,8 +4,14 @@ import ResponseUtils from "../components/ResponseUtils";
 
 class Controller {
 
+    private clientService:any;
+
+    constructor(){
+        this.clientService = new ClientService();
+    }
+
 	public createClient:Function = (req:any, res:any) => {
-        ClientService.createClient(req.body, (response:any) => {
+        this.clientService.createClient(req.body, (response:any) => {
             ResponseUtils.sendCreate(res);
         }, (err:any) => {
             ResponseUtils.sendInternalError(res, err);
@@ -13,8 +19,8 @@ class Controller {
     }
 
     public getClients:Function = (req:any, res:any) => {
-        ClientService.getClients((response:any) => {
-            ResponseUtils.sendGenericSuccess(response);
+        this.clientService.getClients((response:any) => {
+            ResponseUtils.sendGenericSuccess(res, response);
         }, (err:any) => {
             ResponseUtils.sendInternalError(res, err);
         });
@@ -22,4 +28,4 @@ class Controller {
 
 }
 
-export default new Controller();
+export default Controller;

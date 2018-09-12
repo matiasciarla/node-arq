@@ -4,13 +4,13 @@ import Client from '../models/Client';
 
 class IndexModels {
 
-    public client = Client;
+    public client:any;
 
 
     constructor(){
-
+        this.client = new Client().client;
     }
 
 }
 
-export default new IndexModels();
+export default IndexModels;
