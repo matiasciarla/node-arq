@@ -15,7 +15,6 @@ class Router {
         this.routes.route('/clients')
         .get(this.controller.getClients)
         .post(this.controller.createClient);
-               
 
     }
 
@@ -25,4 +24,4 @@ class Router {
 
 }
 
-export default new Router();
+export default Router;

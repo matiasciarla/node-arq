@@ -1,5 +1,4 @@
-let http = require ('http');
-
+let http = require('http');
 
 import App from './App';
 

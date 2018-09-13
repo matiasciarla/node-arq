@@ -23,6 +23,8 @@ class ClientService {
             callbackError(err);
         });
     }
+
+   
 }
 
 export default ClientService;

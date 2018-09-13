@@ -11,8 +11,13 @@ import Health from './routes/Health';
 class App {
 
     public express: any;
+    private router:Router;
+    private health:Health;
 
     constructor() {
+        this.router = new Router();
+        this.health = new Health();
+
         this.express = express();
         this.middleware();
         this.routes();
@@ -30,10 +35,10 @@ class App {
   // Inicia ruteador.
     private routes(): void {
         // this.express.use(Interceptor.intercept);
-        Router.init(express);
-        Health.init(express);
-        this.express.use('/api', Router.getRoutes());
-        this.express.use('/health', Health.getRoutes());
+        this.router.init(express);
+        this.health.init(express);
+        this.express.use('/api', this.router.getRoutes());
+        this.express.use('/health', this.health.getRoutes());
     }
 }
 

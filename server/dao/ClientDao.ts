@@ -11,7 +11,6 @@ class ClientDao {
     }
 
     public getClients: Function = (callback:Function, callbackError:Function) => {
-        console.log(this.indexModels.client);
         this.indexModels.client.findAll().then((clients:any[]) => {
             callback(clients);
         }).catch((err:any) => {
@@ -19,10 +18,10 @@ class ClientDao {
         });
     }
 
-    public  createClient:Function = (client:any, callback:Function, callbackError:Function) => {
+    public createClient:Function = (client:any, callback:Function, callbackError:Function) => {
         this.indexModels.client.create(client).then((response:any) => {
             callback(response);
-        }, (err:any) => {
+        }).catch( (err:any) => {
             callbackError(err);
         });
     }

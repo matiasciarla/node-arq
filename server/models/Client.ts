@@ -4,10 +4,10 @@ import EntityManager from '../config/db.js';
 
 class Client {
 
-    public client:any;
+    private model:any;
 
     constructor(){
-        this.client = EntityManager.define('clients', {
+        this.model = EntityManager.define('clients', {
             id          : { type: Sequelize.INTEGER, primaryKey: true},
             first_name  : Sequelize.STRING,
             last_name   : Sequelize.STRING
@@ -17,6 +17,10 @@ class Client {
             freezeTableName : true,
             tableName       : 'clients'
         });
+    }
+
+    public getModel:Function = () => {
+        return this.model;
     }
 }
 

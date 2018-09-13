@@ -71,4 +71,4 @@ class ResponseUtils {
 
 }
 
-export default new ResponseUtils();
+export default ResponseUtils;

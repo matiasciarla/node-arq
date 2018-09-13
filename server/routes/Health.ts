@@ -43,4 +43,4 @@ class Health {
 
 }
 
-export default new Health();
+export default Health;
