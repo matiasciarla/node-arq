@@ -31,6 +31,10 @@ Ejemplo:
 
 Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el puerto). 
 
+## Subir la imagen a Docker Hub
+
+	npm run docker-push -- --tag=<tag>
+
 ## Subir la imagen a Docker Hub interno y generar al tag beta asociado a la imagen
 
         npm run deploy -- --tag=<tag> --beta=<version beta>
@@ -42,9 +46,6 @@ Ejemplo:
 		
 	npm run deploy -- --tag=1.0.0 --beta=0
 
-## Pasaje a producción
-
-Una vez aprobada la version y pedido el pasaje a producción crear el tag definitivo sin la version beta y hacer pull request al master
 
         
         
