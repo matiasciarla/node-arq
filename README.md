@@ -13,17 +13,21 @@ Tener instalado:
 Correr comandos de instalacion de dependencias cuando se clona el repositorio por primera ves o cuando se actualice alguna dependencia
 
         npm install
+	
+## Instanciar localmente
+
+	npm start
 
   
 ## Subir la imagen al docker local
 
 Ejectutar el siguiente script parados en la carpeta del proyecto
  
-		npm run docker-local -- --tag=<tag>
+	npm run docker-local -- --tag=<tag>
 
 Ejemplo: 
 		
-		npm run docker-local -- --tag=1.0.0
+	npm run docker-local -- --tag=1.0.0
 
 Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el puerto). 
 
@@ -36,7 +40,7 @@ Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el pue
 
 Ejemplo:
 		
-		npm run deploy -- --tag=1.0.0 --beta=0
+	npm run deploy -- --tag=1.0.0 --beta=0
 
 ## Pasaje a producción
 
