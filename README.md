@@ -12,7 +12,7 @@ Tener instalado:
 
 Correr comandos de instalacion de dependencias cuando se clona el repositorio por primera ves o cuando se actualice alguna dependencia
 
-        npm install
+	npm install
 	
 ## Instanciar localmente
 
