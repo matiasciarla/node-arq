@@ -18,8 +18,8 @@ class ClientDao {
         });
     }
 
-    public createClient:Function = (client:any, callback:Function, callbackError:Function) => {
-        this.indexModels.client.create(client).then((response:any) => {
+    public createClient:Function = (client:any, transaction:any, callback:Function, callbackError:Function) => {
+        this.indexModels.client.create(client, {transaction: transaction}).then((response:any) => {
             callback(response);
         }).catch( (err:any) => {
             callbackError(err);
