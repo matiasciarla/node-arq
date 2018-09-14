@@ -1,8 +1,15 @@
 let jwt = require('jsonwebtoken');
 import JwtUtils from '../components/JwtUtils';
-import { decode } from 'punycode';
+import ResponseUtils from '../components/ResponseUtils';
 
 class Interceptor {
+
+    private responseUtils:ResponseUtils;
+
+    constructor(){
+        this.responseUtils = new ResponseUtils();
+    }
+
  
     public intercept: Function = (req:any, res:any, next: Function) => {
 
@@ -20,8 +27,7 @@ class Interceptor {
             }, (err:any) => {
                 console.log('========================= ERROR ======================');
                 console.log(err);
-                res.status(401);
-                res.send('Invalid Token');
+                this.responseUtils.sendInvalidToken(res, 'Invalid Token', 401);
             });
 
         } else {
@@ -36,6 +42,6 @@ class Interceptor {
     }
 }
 
-export default new Interceptor();
+export default Interceptor;
 
 

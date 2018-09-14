@@ -13,10 +13,12 @@ class App {
     public express: any;
     private router:Router;
     private health:Health;
+    private intercept:any;
 
     constructor() {
         this.router = new Router();
         this.health = new Health();
+        this.intercept = new Interceptor().intercept;
 
         this.express = express();
         this.middleware();
@@ -34,7 +36,7 @@ class App {
 
   // Inicia ruteador.
     private routes(): void {
-        // this.express.use(Interceptor.intercept);
+        // this.express.use(this.intercept);
         this.router.init(express);
         this.health.init(express);
         this.express.use('/api', this.router.getRoutes());
