@@ -2,10 +2,10 @@ let Sequelize = require('sequelize');
 
 class EntityManager {
     
-    public connection = new Sequelize('node-arq', process.env.USER_DB, process.env.PASSWORD_DB, {
+    public connection = new Sequelize('<%CONTAINER_NAME%>', process.env.USER_DB, process.env.PASSWORD_DB, {
         host    : process.env.HOST_DB,
         port    : process.env.PORT_DB,
-        dialect : '<%DIALECT%>',
+        dialect : 'mysql',
         pool: {
             max: 24,
             min: 0
