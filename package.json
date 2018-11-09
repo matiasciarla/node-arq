@@ -38,6 +38,7 @@
   },
   "scripts": {
     "start": "gulp",
+    "init": "python3 init.py",
     "docker-local": "python3 local.py",
     "docker-push": "python3 push.py",
     "deploy": "python3 deploy.py"

@@ -67,30 +67,10 @@ gulp.task('start', [config.nodejs.name], function(){
 		ext: 'js',
 		env: {
 			'NODE_ENV': 'development',
-			'user': 'admin',
-			'password': 'Admin_123',
-			'host': 'localhost',
-			'port': '3306'
-		}
-	});
-
-	stream.on('crash', function(){
-		console.error('Application has crashed!\n');
-		stream.emit('restart', 10);  // restart the server in 10 seconds
-	})
-});
-
-gulp.task('startDev', [config.nodejs.name], function(){
-	var stream = nodemon({
-		exec: 'node --inspect',
-		script: 'dist/server.js',
-		ext: 'js',
-		env: {
-			'NODE_ENV': 'development',
-			'user': '',
-			'password': '',
-			'host': '',
-			'port': '3306'
+			'user': '<%USER_DB%>',
+			'password': '<%PASSWORD_DB%>',
+			'host': '<%HOST_DB%>',
+			'port': '<%PORT_DB%>'
 		}
 	});
 
@@ -160,15 +140,6 @@ gulp.task('startProd', [config.nodejs.name], function(){
 	})
 });
 
-
-gulp.task('prod', function(callback){
-	runSequence(config.clean.name, ['scripts'], callback);
-});
-
-gulp.task('dev', function(callback){
-	runSequence(config.clean.name, ['scripts'], 'startDev', callback);
-});
-
 gulp.task('tst', function(callback){
 	runSequence(config.clean.name, ['scripts'], 'startTest', callback);
 });
@@ -179,4 +150,8 @@ gulp.task('homo', function(callback){
 
 gulp.task('default', function(callback){
 	runSequence(config.clean.name, ['scripts'], 'start', 'watch', callback);
+});
+
+gulp.task('prod', function(callback){
+	runSequence(config.clean.name, ['scripts'], callback);
 });

@@ -1,5 +1,5 @@
 {
-    "dockerHub": "",
-    "container": "",
-    "run": "-p 8888:8888 --name node-arq -v /usr/app -w /usr/app -e user=root -e password=Admin_123 -e host=localhost -e port=3306"
+    "dockerHub": "<%REGISTRY%>",
+    "container": "<%CONTAINER_NAME%>",
+    "run": "-p <%PORT_API%>:8888 --name node-arq -v /usr/app -w /usr/app"
 }

@@ -5,6 +5,6 @@ WORKDIR /usr/app
 COPY dist/ /usr/app/dist
 COPY node_modules/ /usr/app/node_modules
 
-EXPOSE 8888
+EXPOSE <%PORT_API%>
 
-ENTRYPOINT ["/bin/bash", "-c", "user=$user password=$password host=$host port=$port node /usr/app/dist/server.js"]
+ENTRYPOINT ["/bin/bash", "-c", "node /usr/app/dist/server.js"]
