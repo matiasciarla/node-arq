@@ -3,11 +3,16 @@ import EntityManager from '../config/db.js';
 class Health {
 
     private routes: any;
+    private entityManager:EntityManager;
 
-    init(express:any){
+    constructor(){
+        this.entityManager = EntityManager.getInstance();
+    }
+
+    public init:Function = (express:any) => {
         this.routes = express.Router();
 
-        this.routes.get('/', function(req: any, res: any) {
+        this.routes.get('/', (req: any, res: any) => {
             
             let response:any = {};
 
@@ -18,7 +23,7 @@ class Health {
             dependency.dependencyDescription = 'Base de datos';
 
 
-            EntityManager.authenticate()
+            this.entityManager.getConnection().authenticate()
             .then(() => {
                 dependency.healthOk = true;
                 response.healthSummary.healthOk = true;

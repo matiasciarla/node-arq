@@ -11,7 +11,7 @@ class Interceptor {
     }
 
  
-    public intercept: Function = (req:any, res:any, next: Function) => {
+    public intercept:Function = (req:any, res:any, next: Function) => {
 
         if(this.isInterceptable(req)){
             let token:string = '';
@@ -36,7 +36,9 @@ class Interceptor {
     }
 
     private isInterceptable: Function = (req: any) => {
-        let interceptable = req.originalUrl.includes('api');
+        // Uncomment to intercept api
+        // let interceptable = req.originalUrl.includes('api');
+        let interceptable = false;
 
         return interceptable;
     }

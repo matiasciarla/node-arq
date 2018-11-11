@@ -1,8 +1,11 @@
 let Sequelize = require('sequelize');
 
 class EntityManager {
+
     
-    public connection = new Sequelize('<%CONTAINER_NAME%>', process.env.USER_DB, process.env.PASSWORD_DB, {
+    private static instance: EntityManager;
+    
+    private connection = new Sequelize('<%CONTAINER_NAME%>', process.env.USER_DB, process.env.PASSWORD_DB, {
         host    : process.env.HOST_DB,
         port    : process.env.PORT_DB,
         dialect : 'mysql',
@@ -24,6 +27,18 @@ class EntityManager {
           console.error('Unable to connect to the database:', err);
         });       
     }
+
+    public static getInstance:Function = ():EntityManager => {
+        if (!EntityManager.instance) {
+            EntityManager.instance = new EntityManager();
+        }
+        return EntityManager.instance;
+    }
+
+    public getConnection:Function = () => {
+        return this.connection;
+    }
+    
 }
 
-export default new EntityManager().connection;
+export default EntityManager;

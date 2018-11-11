@@ -13,7 +13,7 @@ class App {
     public express: any;
     private router:Router;
     private health:Health;
-    private intercept:any;
+    private intercept:Function;
 
     constructor() {
         this.router = new Router();
@@ -25,7 +25,7 @@ class App {
         this.routes();
     }
 
-    // Configura Express middleware.
+    // Config Express middleware.
     private middleware(): void {
         this.express.use(bodyParser.json({limit: "50mb"}));
         this.express.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
@@ -34,9 +34,9 @@ class App {
         this.express.use(bodyParser.urlencoded({ extended: false }));
     }
 
-  // Inicia ruteador.
+  // Init Routes.
     private routes(): void {
-        // this.express.use(this.intercept);
+        this.express.use(this.intercept);
         this.router.init(express);
         this.health.init(express);
         this.express.use('/api', this.router.getRoutes());

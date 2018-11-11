@@ -1,5 +1,5 @@
 {
     "dockerHub": "<%REGISTRY%>",
     "container": "<%CONTAINER_NAME%>",
-    "run": "-p <%PORT_API%>:8888 --name <%CONTAINER_NAME%> -v /usr/app -w /usr/app --env-file=environments"
+    "run": "-p 8888:8888 --name <%CONTAINER_NAME%> -v /usr/app -w /usr/app --env-file=environments --net=host"
 }
