@@ -4,10 +4,21 @@ import Client from '../models/Client';
 
 class IndexModels {
 
-    public client:any;
+    private client:any;
 
     constructor(){
-        this.client = new Client().getModel();
+        this.client = new Client();
+
+        this.associate();
+    }
+
+    public getClient:Function = () => {
+        return this.client;
+    }
+
+    // Declare the associations here
+    private associate:Function = () => {
+
     }
 
 }

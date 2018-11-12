@@ -11,7 +11,7 @@ class ClientDao {
     }
 
     public getClients: Function = (callback:Function, callbackError:Function) => {
-        this.indexModels.client.findAll().then((clients:any[]) => {
+        this.indexModels.getClient().findAll().then((clients:any[]) => {
             callback(clients);
         }).catch((err:any) => {
             callbackError(err);
@@ -19,7 +19,7 @@ class ClientDao {
     }
 
     public createClient:Function = (client:any, transaction:any, callback:Function, callbackError:Function) => {
-        this.indexModels.client.create(client, {transaction: transaction}).then((response:any) => {
+        this.indexModels.getClient().create(client, {transaction: transaction}).then((response:any) => {
             callback(response);
         }).catch( (err:any) => {
             callbackError(err);
