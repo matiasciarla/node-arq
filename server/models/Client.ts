@@ -1,6 +1,6 @@
 let Sequelize = require('sequelize');
 
-import SQLManager from '../config/SQLManager';
+import SQLManager from '../database/SQLManager';
 
 class Client {
 
