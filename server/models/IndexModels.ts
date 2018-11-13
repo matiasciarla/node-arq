@@ -4,7 +4,7 @@ import Client from '../models/Client';
 
 class IndexModels {
 
-    private client:any;
+    private client:Client;
 
     constructor(){
         this.client = new Client();
@@ -13,7 +13,7 @@ class IndexModels {
     }
 
     public getClient:Function = () => {
-        return this.client;
+        return this.client.getModel();
     }
 
     // Declare the associations here

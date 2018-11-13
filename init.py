@@ -2,14 +2,19 @@ import os
 import sys
 import fileinput
 
+option = input("Que bases de datos va a utilizar: \n 1) SQL (en este ejemplo usamos MySql) \n 2) Mongo  \n 3) Ambas \n :")
+
+if(option != "1" and option != "2" and option != "3"):
+    print("La opcion ingresada no es correcta")
+
 constPortApi = '<%PORT_API%>'
 constUserDb ='<%USER_SQL%>'
 constPassDb ='<%PASSWORD_SQL%>'
 constHostDb ='<%HOST_SQL%>'
 constPortDb ='<%PORT_SQL%>'
 constNameDb ='<%NAME_SQL%>'
-constUserMongo ='<%USER_MONGO%>'
-constPassMongo ='<%PASSWORD_MONGO%>'
+# constUserMongo ='<%USER_MONGO%>'
+# constPassMongo ='<%PASSWORD_MONGO%>'
 constHostMongo ='<%HOST_MONGO%>'
 constNameMongo ='<%NAME_MONGO%>'
 constContainer = '<%CONTAINER_NAME%>'
@@ -25,12 +30,12 @@ portApi = input('Port Api:')
 nameDb = input('Name Data Base:')
 host = input('Host Data Base:')
 userDb = input('User Data Base:')
-portDb = input('Port Data Base:')
 passwordDb = input('Password Data Base:')
+portDb = input('Port Data Base:')
 nameMongo = input('Name Mongo:')
 hostMongo = input('Host Mongo:')
-userMongo = input('User Mongo:')
-passwordMongo = input('Password Mongo:')
+# userMongo = input('User Mongo:')
+# passwordMongo = input('Password Mongo:')
 registry = input('Docker Registry:')
 container = input('Docker Container:')
 
@@ -52,8 +57,8 @@ replaceFile(pathEnvironments, constPortDb, portDb)
 replaceFile(pathEnvironments, constUserDb, userDb)
 replaceFile(pathEnvironments, constNameDb, nameDb)
 replaceFile(pathEnvironments, constHostMongo, hostMongo)
-replaceFile(pathEnvironments, constPassMongo, passwordMongo)
-replaceFile(pathEnvironments, constUserMongo, userMongo)
+# replaceFile(pathEnvironments, constPassMongo, passwordMongo)
+# replaceFile(pathEnvironments, constUserMongo, userMongo)
 replaceFile(pathEnvironments, constNameMongo, nameMongo)
 replaceFile(pathConfig, constRegistry, registry)
 replaceFile(pathConfig, constContainer, container)
