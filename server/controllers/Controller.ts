@@ -1,5 +1,6 @@
 import ClientService from "../service/ClientService";
 import ResponseUtils from "../components/ResponseUtils";
+import UserService from "../service/UserService";
 
 
 class Controller {
@@ -25,6 +26,20 @@ class Controller {
             this.responseUtils.sendGenericSuccess(res, response);
         }, (err:any) => {
             this.responseUtils.sendInternalError(res, err);
+        });
+    }
+
+    public createUser:Function = (req:any, res:any) => {
+        UserService.createUser(req.body, () => {
+            this.responseUtils.sendCreate(res);
+        }, (err:any) => {
+            this.responseUtils.sendInternalError(res, err, 0);
+        })
+    }
+
+    public findUsers:Function = (req:any, res:any) => {
+        UserService.findAll((users:any) => {
+            this.responseUtils.sendGenericSuccess(res, users);
         });
     }
 

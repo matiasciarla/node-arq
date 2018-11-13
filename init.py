@@ -3,10 +3,15 @@ import sys
 import fileinput
 
 constPortApi = '<%PORT_API%>'
-constUserDb ='<%USER_DB%>'
-constPassDb ='<%PASSWORD_DB%>'
-constHostDb ='<%HOST_DB%>'
-constPortDb ='<%PORT_DB%>'
+constUserDb ='<%USER_SQL%>'
+constPassDb ='<%PASSWORD_SQL%>'
+constHostDb ='<%HOST_SQL%>'
+constPortDb ='<%PORT_SQL%>'
+constNameDb ='<%NAME_SQL%>'
+constUserMongo ='<%USER_MONGO%>'
+constPassMongo ='<%PASSWORD_MONGO%>'
+constHostMongo ='<%HOST_MONGO%>'
+constNameMongo ='<%NAME_MONGO%>'
 constContainer = '<%CONTAINER_NAME%>'
 constRegistry = '<%REGISTRY%>'
 
@@ -17,10 +22,15 @@ pathDataSource = './server/config/db.ts'
 pathGulp = './gulp/tasks/production.js'
 
 portApi = input('Port Api:')
+nameDb = input('Name Data Base:')
 host = input('Host Data Base:')
 userDb = input('User Data Base:')
-passwordDb = input('Password Data Base:')
 portDb = input('Port Data Base:')
+passwordDb = input('Password Data Base:')
+nameMongo = input('Name Mongo:')
+hostMongo = input('Host Mongo:')
+userMongo = input('User Mongo:')
+passwordMongo = input('Password Mongo:')
 registry = input('Docker Registry:')
 container = input('Docker Container:')
 
@@ -40,6 +50,11 @@ replaceFile(pathEnvironments, constHostDb, host)
 replaceFile(pathEnvironments, constPassDb, passwordDb)
 replaceFile(pathEnvironments, constPortDb, portDb)
 replaceFile(pathEnvironments, constUserDb, userDb)
+replaceFile(pathEnvironments, constNameDb, nameDb)
+replaceFile(pathEnvironments, constHostMongo, hostMongo)
+replaceFile(pathEnvironments, constPassMongo, passwordMongo)
+replaceFile(pathEnvironments, constUserMongo, userMongo)
+replaceFile(pathEnvironments, constNameMongo, nameMongo)
 replaceFile(pathConfig, constRegistry, registry)
 replaceFile(pathConfig, constContainer, container)
 replaceFile(pathConfig, constPortApi, portApi)

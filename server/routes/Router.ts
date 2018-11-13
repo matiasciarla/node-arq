@@ -16,6 +16,10 @@ class Router {
         .get(this.controller.getClients)
         .post(this.controller.createClient);
 
+        this.routes.route('/users')
+        .get(this.controller.findUsers)
+        .post(this.controller.createUser);
+
     }
 
     public getRoutes(){

@@ -67,10 +67,10 @@ gulp.task('start', [config.nodejs.name], function(){
 		ext: 'js',
 		env: {
 			'NODE_ENV': 'development',
-			'USER_DB': '<%USER_DB%>',
-			'PASSWORD_DB': '<%PASSWORD_DB%>',
-			'HOST_DB': '<%HOST_DB%>',
-			'PORT_DB': '<%PORT_DB%>'
+			'USER_SQL': '<%USER_SQL%>',
+			'PASSWORD_SQL': '<%PASSWORD_SQL%>',
+			'HOST_SQL': '<%HOST_SQL%>',
+			'PORT_SQL': '<%PORT_SQL%>'
 		}
 	});
 
