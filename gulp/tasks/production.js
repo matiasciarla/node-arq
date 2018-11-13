@@ -70,7 +70,9 @@ gulp.task('start', [config.nodejs.name], function(){
 			'USER_SQL': '<%USER_SQL%>',
 			'PASSWORD_SQL': '<%PASSWORD_SQL%>',
 			'HOST_SQL': '<%HOST_SQL%>',
-			'PORT_SQL': '<%PORT_SQL%>'
+			'PORT_SQL': '<%PORT_SQL%>',
+			'HOST_MONGO':'<%HOST_MONGO%>',
+			'NAME_MONGO':'<%NAME_MONGO%>'
 		}
 	});
 

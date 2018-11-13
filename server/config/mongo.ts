@@ -7,7 +7,7 @@ class MongoManager {
 
     constructor(){
 
-        this.connection.connect('mongodb://' + process.env.HOST_MONGO +'/' + process.env.BASE_MONGO, function (err:any) {
+        this.connection.connect('mongodb://' + process.env.HOST_MONGO +'/' + process.env.NAME_MONGO, function (err:any) {
  
             if (err) throw err;
             
