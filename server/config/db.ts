@@ -5,9 +5,9 @@ class EntityManager {
     
     private static instance: EntityManager;
     
-    private connection = new Sequelize('<%CONTAINER_NAME%>', process.env.USER_DB, process.env.PASSWORD_DB, {
-        host    : process.env.HOST_DB,
-        port    : process.env.PORT_DB,
+    private connection = new Sequelize('<%CONTAINER_NAME%>', process.env.USER_SQL, process.env.PASSWORD_SQL, {
+        host    : process.env.HOST_SQL,
+        port    : process.env.PORT_SQL,
         dialect : 'mysql',
         pool: {
             max: 24,
