@@ -1,12 +1,12 @@
-import EntityManager from '../config/db.js';
+import SQLManager from '../config/db.js';
 
 class Health {
 
     private routes: any;
-    private entityManager:EntityManager;
+    private SQLManager:SQLManager;
 
     constructor(){
-        this.entityManager = EntityManager.getInstance();
+        this.SQLManager = SQLManager.getInstance();
     }
 
     public init:Function = (express:any) => {
@@ -23,7 +23,7 @@ class Health {
             dependency.dependencyDescription = 'Base de datos';
 
 
-            this.entityManager.getConnection().authenticate()
+            this.SQLManager.getConnection().authenticate()
             .then(() => {
                 dependency.healthOk = true;
                 response.healthSummary.healthOk = true;

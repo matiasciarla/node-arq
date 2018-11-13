@@ -1,4 +1,4 @@
-import EntityManager from '../config/db.js';
+import SQLManager from '../config/db.js';
 
 import IndexModels from '../models/IndexModels';
 

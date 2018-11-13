@@ -14,10 +14,6 @@ class MongoManager {
             console.log('Successfully connected mongodb');
         
         });
-
-        
-
-        
      }
 
     

@@ -1,17 +1,17 @@
 let Sequelize = require('sequelize');
 
-import EntityManager from '../config/db.js';
+import SQLManager from '../config/db.js';
 
 class Client {
 
     private model:any;
-    private entityManager:EntityManager;
+    private SQLManager:SQLManager;
 
     constructor(){
 
-        this.entityManager = EntityManager.getInstance();
+        this.SQLManager = SQLManager.getInstance();
 
-        this.model = this.entityManager.getConnection().define('clients', {
+        this.model = this.SQLManager.getConnection().define('clients', {
             id          : { type: Sequelize.INTEGER, primaryKey: true},
             first_name  : Sequelize.STRING,
             last_name   : Sequelize.STRING

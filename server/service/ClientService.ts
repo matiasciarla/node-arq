@@ -1,14 +1,14 @@
-import EntityManager from '../config/db';
+import SQLManager from '../config/db';
 import ClientDao from '../dao/ClientDao';
 
 class ClientService {
 
     private clientDao:ClientDao;
-    private entityManager:EntityManager;
+    private SQLManager:SQLManager;
 
     constructor(){
         this.clientDao = new ClientDao();
-        this.entityManager = EntityManager.getInstance();
+        this.SQLManager = SQLManager.getInstance();
     }
 
     public getClients:Function = (callback:Function, callbackError:Function) => {
@@ -21,7 +21,7 @@ class ClientService {
     }
 
     public createClient:Function = (client:any, callback:Function, callbackError:Function) => {
-        this.entityManager.getConnection().transaction().then((transaction:any) => {
+        this.SQLManager.getConnection().transaction().then((transaction:any) => {
             this.clientDao.createClient(client, transaction, (response:any) => {
                 transaction.commit();
                 callback(response);

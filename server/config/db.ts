@@ -1,9 +1,9 @@
 let Sequelize = require('sequelize');
 
-class EntityManager {
+class SQLManager {
 
     
-    private static instance: EntityManager;
+    private static instance: SQLManager;
     
     private connection = new Sequelize('<%CONTAINER_NAME%>', process.env.USER_SQL, process.env.PASSWORD_SQL, {
         host    : process.env.HOST_SQL,
@@ -28,11 +28,11 @@ class EntityManager {
         });       
     }
 
-    public static getInstance:Function = ():EntityManager => {
-        if (!EntityManager.instance) {
-            EntityManager.instance = new EntityManager();
+    public static getInstance:Function = ():SQLManager => {
+        if (!SQLManager.instance) {
+            SQLManager.instance = new SQLManager();
         }
-        return EntityManager.instance;
+        return SQLManager.instance;
     }
 
     public getConnection:Function = () => {
@@ -41,4 +41,4 @@ class EntityManager {
     
 }
 
-export default EntityManager;
+export default SQLManager;
