@@ -1,4 +1,4 @@
-import SQLManager from '../config/db';
+import SQLManager from '../config/SQLManager';
 import ClientDao from '../dao/ClientDao';
 
 class ClientService {
