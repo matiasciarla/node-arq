@@ -24,7 +24,7 @@ else:
     pathDockerfile = './docker/Dockerfile'
     pathEnvironments = 'environments'
     pathConfig = 'config.json'
-    pathDataSource = './server/config/db.ts'
+    pathDataSource = './server/database/SQLManager.ts'
     pathGulp = './gulp/tasks/production.js'
 
     portApi = input('Port Api:')

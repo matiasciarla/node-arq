@@ -1,5 +1,4 @@
 import User from '../models/User';
-import asd from '../config/mongo';
 
 class UserDAO {
 
