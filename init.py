@@ -32,6 +32,7 @@ pathScript = './server/scripts/create.sql'
 pathController = './server/controllers/Controller.ts'
 pathRoute = './server/routes/Router.ts'
 pathHealth = './server/routes/Health.ts'
+pathApp = './App.ts'
 
 
 # Functions
@@ -93,7 +94,8 @@ def deleteMongo():
 def deleteSQL():
     linesRoute = [14,15,16]
     linesController = [0,7,12,17,18,19,20,21,22,23,25,26,27,28,29,30,31]
-    linesGulp = [68,69,70,71,72]   
+    linesGulp = [68,69,70,71,72] 
+    linesApp = [7,19,42]  
 
     os.remove(pathDataSource)
     os.remove(pathClient)
