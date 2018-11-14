@@ -107,6 +107,7 @@ def deleteSQL():
     deleteLines(pathController, linesController)
     deleteLines(pathRoute, linesRoute)
     deleteLines(pathGulp, linesGulp)
+    deleteLines(pathApp, linesApp)
 
 
 def replaceFile(filename, constant, param):
