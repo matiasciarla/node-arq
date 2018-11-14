@@ -66,13 +66,13 @@ gulp.task('start', [config.nodejs.name], function(){
 		script: 'dist/server.js',
 		ext: 'js',
 		env: {
-			'NODE_ENV': 'development',
 			'USER_SQL': '<%USER_SQL%>',
 			'PASSWORD_SQL': '<%PASSWORD_SQL%>',
 			'HOST_SQL': '<%HOST_SQL%>',
 			'PORT_SQL': '<%PORT_SQL%>',
 			'HOST_MONGO':'<%HOST_MONGO%>',
-			'NAME_MONGO':'<%NAME_MONGO%>'
+			'NAME_MONGO':'<%NAME_MONGO%>',
+			'NODE_ENV': 'development'
 		}
 	});
 

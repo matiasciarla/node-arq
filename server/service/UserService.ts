@@ -2,8 +2,14 @@ import UserDAO from '../dao/UserDAO';
 
 class UserService {
 
+    private userDao:UserDAO;
+
+    constructor(){
+        this.userDao = new UserDAO();
+    }
+
     public createUser:Function = (user:any, callback:Function, callbackError:Function) => {
-        UserDAO.createUsers(user, () => {
+        this.userDao.createUsers(user, () => {
             callback();
         }, (err:any) => {
             callbackError(err);
@@ -11,10 +17,10 @@ class UserService {
     }
 
     public findAll:Function = (callback:Function) => {
-        UserDAO.find((users:any) => {
+        this.userDao.find((users:any) => {
             callback(users);
         });
     }
 }
 
-export default new UserService();
+export default UserService;

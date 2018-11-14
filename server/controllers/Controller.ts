@@ -7,10 +7,12 @@ class Controller {
 
     private clientService:ClientService;
     private responseUtils:ResponseUtils;
+    private userService:UserService;
 
     constructor(){
         this.clientService = new ClientService();
         this.responseUtils = new ResponseUtils();
+        this.userService = new UserService();
     }
 
 	public createClient:Function = (req:any, res:any) => {
@@ -30,7 +32,7 @@ class Controller {
     }
 
     public createUser:Function = (req:any, res:any) => {
-        UserService.createUser(req.body, () => {
+        this.userService.createUser(req.body, () => {
             this.responseUtils.sendCreate(res);
         }, (err:any) => {
             this.responseUtils.sendInternalError(res, err, 0);
@@ -38,7 +40,7 @@ class Controller {
     }
 
     public findUsers:Function = (req:any, res:any) => {
-        UserService.findAll((users:any) => {
+        this.userService.findAll((users:any) => {
             this.responseUtils.sendGenericSuccess(res, users);
         });
     }
