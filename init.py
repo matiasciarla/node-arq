@@ -33,24 +33,7 @@ pathController = './server/controllers/Controller.ts'
 pathRoute = './server/routes/Router.ts'
 
 
-option = input("Que bases de datos va a utilizar: \n 1) SQL (en este ejemplo usamos MySql) \n 2) Mongo  \n 3) Ambas \n ?")
-
-if(option == "1"):
-    configApi()
-    deleteMongo()
-    configSQL()
-elif(option == "2"):
-    configApi()
-    deleteSQL()
-    configMongo()
-elif(option == "3"):
-    configApi()
-    configSQL()
-    configMongo()
-else:
-    print("La opcion ingresada no es correcta")
-
-
+# Functions
 def configApi():
     portApi = input('Port Api:')
     registry = input('Docker Registry:')
@@ -168,5 +151,27 @@ def deleteLines(filename, linesRemove):
             f.write(line)
 
     f.close()
+
+
+# Init
+option = input("Que bases de datos va a utilizar: \n 1) SQL (en este ejemplo usamos MySql) \n 2) Mongo  \n 3) Ambas \n ?")
+
+if(option == "1"):
+    configApi()
+    deleteMongo()
+    configSQL()
+elif(option == "2"):
+    configApi()
+    deleteSQL()
+    configMongo()
+elif(option == "3"):
+    configApi()
+    configSQL()
+    configMongo()
+else:
+    print("La opcion ingresada no es correcta")
+
+
+
 
     
