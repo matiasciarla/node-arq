@@ -95,7 +95,7 @@ def deleteSQL():
     linesRoute = [14,15,16]
     linesController = [0,7,12,17,18,19,20,21,22,23,25,26,27,28,29,30,31]
     linesGulp = [68,69,70,71,72] 
-    linesApp = [7,19,42]  
+    linesApp = [7,13,19,42]  
 
     os.remove(pathDataSource)
     os.remove(pathClient)
