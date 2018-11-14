@@ -70,7 +70,6 @@ def configMongo():
     replaceFile(pathEnvironments, constNameMongo, nameMongo)
     replaceFile(pathGulp, constHostMongo, hostMongo)
     replaceFile(pathGulp, constNameMongo, nameMongo)
-    replaceFile(pathDataSource, constContainer, container)
 
 
 def deleteMongo():
