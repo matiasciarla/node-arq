@@ -33,17 +33,17 @@ pathController = './server/controllers/Controller.ts'
 pathRoute = './server/routes/Router.ts'
 
 
-option = input("Que bases de datos va a utilizar: \n 1) SQL (en este ejemplo usamos MySql) \n 2) Mongo  \n 3) Ambas \n :")
+option = input("Que bases de datos va a utilizar: \n 1) SQL (en este ejemplo usamos MySql) \n 2) Mongo  \n 3) Ambas \n ?")
 
 if(option == "1"):
     configApi()
     deleteMongo()
     configSQL()
-else if(option == "2"):
+elif(option == "2"):
     configApi()
     deleteSQL()
     configMongo()
-else if(option == "3"):
+elif(option == "3"):
     configApi()
     configSQL()
     configMongo()
