@@ -1,18 +1,18 @@
 import SQLManager from '../database/SQLManager';
-import ClientDao from '../dao/ClientDao';
+import ClientDAO from '../dao/ClientDAO';
 
 class ClientService {
 
-    private clientDao:ClientDao;
+    private clientDAO:ClientDAO;
     private SQLManager:SQLManager;
 
     constructor(){
-        this.clientDao = new ClientDao();
+        this.clientDAO = new ClientDAO();
         this.SQLManager = SQLManager.getInstance();
     }
 
     public getClients:Function = (callback:Function, callbackError:Function) => {
-        this.clientDao.getClients((response:any) => {
+        this.clientDAO.getClients((response:any) => {
             callback(response);
         }, (err:any) => {
             callbackError(err);
@@ -22,7 +22,7 @@ class ClientService {
 
     public createClient:Function = (client:any, callback:Function, callbackError:Function) => {
         this.SQLManager.getConnection().transaction().then((transaction:any) => {
-            this.clientDao.createClient(client, transaction, (response:any) => {
+            this.clientDAO.createClient(client, transaction, (response:any) => {
                 transaction.commit();
                 callback(response);
             }, (err:any) => {
