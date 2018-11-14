@@ -61,6 +61,7 @@ def configSQL():
     replaceFile(pathGulp, constPassDb, passwordDb)
     replaceFile(pathGulp, constPortDb, portDb)
     replaceFile(pathGulp, constUserDb, userDb)
+    replaceFile(pathDataSource, constNameDb, nameDb)
 
 def configMongo():
     nameMongo = input('Name Mongo:')

@@ -5,7 +5,7 @@ class SQLManager {
     
     private static instance: SQLManager;
     
-    private connection = new Sequelize('<%CONTAINER_NAME%>', process.env.USER_SQL, process.env.PASSWORD_SQL, {
+    private connection = new Sequelize(process.env.NAME_SQL, process.env.USER_SQL, process.env.PASSWORD_SQL, {
         host    : process.env.HOST_SQL,
         port    : process.env.PORT_SQL,
         dialect : 'mysql',
