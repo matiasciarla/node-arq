@@ -43,6 +43,9 @@
     "docker-local": "python3 local.py",
     "docker-push": "python3 push.py"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Matias Ciarla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiasciarla/node-arq/issues"
+  }
 }
