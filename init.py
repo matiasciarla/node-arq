@@ -67,8 +67,8 @@ def configSQL():
     replaceFile(pathDataSource, constNameDb, nameDb)
 
 def configMongo():
-    nameMongo = input('Name Mongo:')
-    hostMongo = input('Host Mongo:')
+    nameMongo = input('Name Mongo Data Base:')
+    hostMongo = input('Host Mongo Data Base:')
 
     replaceFile(pathEnvironments, constHostMongo, hostMongo)
     replaceFile(pathEnvironments, constNameMongo, nameMongo)

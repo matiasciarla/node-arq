@@ -2,10 +2,12 @@ let http = require('http');
 
 import App from './App';
 
-const port = 8888;
-App.set('port', port);
+let express = new App().getExpress();
 
-const server = http.createServer(App);
+const port = 8888;
+express.set('port', port);
+
+const server = http.createServer(express);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);

@@ -7,10 +7,10 @@ import Router from './routes/Router';
 import Interceptor from './interceptor/Interceptor';
 import Health from './routes/Health';
 
-// Crea y configura ExpressJS.
+// Create and configure ExpressJS.
 class App {
 
-    public express: any;
+    private express:any;
     private router:Router;
     private health:Health;
     private intercept:Function;
@@ -34,7 +34,7 @@ class App {
         this.express.use(bodyParser.urlencoded({ extended: false }));
     }
 
-  // Init Routes.
+    // Init Routes.
     private routes(): void {
         this.express.use(this.intercept);
         this.router.init(express);
@@ -42,6 +42,10 @@ class App {
         this.express.use('/api', this.router.getRoutes());
         this.express.use('/health', this.health.getRoutes());
     }
+
+    public getExpress:Function = () => {
+        return this.express;
+    }
 }
 
-export default new App().express;
+export default App;
