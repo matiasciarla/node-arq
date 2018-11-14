@@ -31,6 +31,7 @@ pathUserService = './server/service/UserService.ts'
 pathScript = './server/scripts/create.sql'
 pathController = './server/controllers/Controller.ts'
 pathRoute = './server/routes/Router.ts'
+pathHealth = './server/routes/Health.ts'
 
 
 # Functions
@@ -99,6 +100,7 @@ def deleteSQL():
     os.remove(pathIndex)
     os.remove(pathClientDao)
     os.remove(pathClientService)
+    os.remove(pathHealth)
 
     deleteLines(pathController, linesController)
     deleteLines(pathRoute, linesRoute)
