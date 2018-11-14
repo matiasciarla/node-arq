@@ -32,7 +32,7 @@ pathScript = './server/scripts/create.sql'
 pathController = './server/controllers/Controller.ts'
 pathRoute = './server/routes/Router.ts'
 pathHealth = './server/routes/Health.ts'
-pathApp = './App.ts'
+pathApp = 'App.ts'
 
 
 # Functions
