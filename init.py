@@ -33,17 +33,21 @@ pathController = './server/controllers/Controller.ts'
 pathRoute = './server/routes/Router.ts'
 pathHealth = './server/routes/Health.ts'
 pathApp = './server/App.ts'
+pathScriptPush = 'push.py'
+pathPackageJson = 'package.json'
 
 
 # Functions
 def configApi():
-    option = input('Tiene Registry de docker? \n [si / no]')
+    option = input('Tiene Registry de docker? \n [si / no]:')
     
 
     if(option == 'si'):
         registry = input('Docker Registry:')
     elif(option == 'no'):
         registry = ''
+        os.remove(pathScriptPush)
+        deleteLines(pathPackageJson, [42])
     else:
         print('Debe seleccionar si o no')
         configApi()
@@ -173,7 +177,7 @@ def init():
     1) SQL (en este ejemplo usamos MySql) 
     2) Mongo  
     3) Ambas 
-    ?""")
+    :""")
 
     if(option == "1"):
         configApi()

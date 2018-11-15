@@ -40,8 +40,8 @@
   "scripts": {
     "start": "gulp",
     "create": "python3 init.py",
-    "docker-local": "python3 local.py",
-    "docker-push": "python3 push.py"
+    "docker-push": "python3 push.py",
+    "docker-local": "python3 local.py"
   },
   "author": "Matias Ciarla",
   "license": "ISC",
