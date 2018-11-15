@@ -37,8 +37,17 @@ pathApp = './server/App.ts'
 
 # Functions
 def configApi():
+    option = input('Tiene Registry de docker? \n [si / no]')
     portApi = input('Port Api:')
-    registry = input('Docker Registry:')
+
+    if(option == 'si'):
+        registry = input('Docker Registry:')
+    elif(option == 'no'):
+        registry = ''
+    else:
+        print('Debe seleccionar si o no')
+        configApi()
+
     container = input('Docker Container:')
 
     replaceFile(pathConfig, constRegistry, registry)
@@ -158,24 +167,32 @@ def deleteLines(filename, linesRemove):
 
     f.close()
 
+def init():
+    option = input("""Que bases de datos va a utilizar: 
+    \t 1) SQL (en este ejemplo usamos MySql) 
+    \t 2) Mongo  
+    \t 3) Ambas 
+    ?""")
+
+    if(option == "1"):
+        configApi()
+        deleteMongo()
+        configSQL()
+    elif(option == "2"):
+        configApi()
+        deleteSQL()
+        configMongo()
+    elif(option == "3"):
+        configApi()
+        configSQL()
+        configMongo()
+    else:
+        print("La opcion ingresada no es correcta")
+        init()
 
 # Init
-option = input("Que bases de datos va a utilizar: \n 1) SQL (en este ejemplo usamos MySql) \n 2) Mongo  \n 3) Ambas \n ?")
+init()
 
-if(option == "1"):
-    configApi()
-    deleteMongo()
-    configSQL()
-elif(option == "2"):
-    configApi()
-    deleteSQL()
-    configMongo()
-elif(option == "3"):
-    configApi()
-    configSQL()
-    configMongo()
-else:
-    print("La opcion ingresada no es correcta")
 
 
 

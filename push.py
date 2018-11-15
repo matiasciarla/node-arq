@@ -24,7 +24,7 @@ if args.tag != None :
     if len(proc) > 0:
         pswd = input('User Docker:')
         usr = getpass.getpass('Password:')
-        resp = os.popen("docker login " + dockerHub + " -u " + pswd + " -p " + usr).read()
+        resp = os.popen("docker login -u " + usr + " -p " + pswd).read()
 
         if "Login Succeeded" not in resp :
             print("Usuario o password de DockerHub incorrectos")
