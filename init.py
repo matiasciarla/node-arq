@@ -170,9 +170,9 @@ def deleteLines(filename, linesRemove):
 
 def init():
     option = input("""Que bases de datos va a utilizar: 
-    \t 1) SQL (en este ejemplo usamos MySql) 
-    \t 2) Mongo  
-    \t 3) Ambas 
+    1) SQL (en este ejemplo usamos MySql) 
+    2) Mongo  
+    3) Ambas 
     ?""")
 
     if(option == "1"):
