@@ -38,7 +38,7 @@ pathApp = './server/App.ts'
 # Functions
 def configApi():
     option = input('Tiene Registry de docker? \n [si / no]')
-    portApi = input('Port Api:')
+    
 
     if(option == 'si'):
         registry = input('Docker Registry:')
@@ -49,7 +49,8 @@ def configApi():
         configApi()
 
     container = input('Docker Container:')
-
+    portApi = input('Port Api:')
+    
     replaceFile(pathConfig, constRegistry, registry)
     replaceFile(pathConfig, constContainer, container)
     replaceFile(pathConfig, constPortApi, portApi)
