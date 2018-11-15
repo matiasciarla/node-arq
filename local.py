@@ -24,18 +24,14 @@ if args.tag != None:
     os.system("docker stop " + container)
     os.system("docker rm " + container)
 
-    proc = os.popen("docker images -q " + dockerHub + "/" + container + ":" + args.tag).read()
-
-    if len(proc) > 0:
-    	os.system("docker rmi " + dockerHub + "/" + container + ":" + args.tag)
-    
-
     os.system("cp -R ./dist ./docker")
     os.system("cp -R ./node_modules ./docker")
 
-    os.system("docker build -t " + dockerHub + "/" + container + ":" + args.tag + " -t " + dockerHub + "/" + container + ":latest ./docker")
+    registry =  '' if not dockerHub else (dockerHub + "/")
 
-    os.system("docker run -d " + run + " " + dockerHub + "/" + container + ":" + args.tag)
+    os.system("docker build -t " + registry + container + ":" + args.tag + " -t " + registry + container + ":latest ./docker")
+
+    os.system("docker run -d " + run + " " + registry + container + ":" + args.tag)
 
     os.system("rm -R ./docker/dist")
     os.system("rm -R ./docker/node_modules")
