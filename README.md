@@ -5,8 +5,8 @@
 Tener instalado:
 - npm (v5.6.0)
 - node (v8.9.4)
-- docker (lo mas actualizado posible)
-- python3
+- docker (17.05.0-ce)
+- python3 (3.5)
 
 ## Iniciar proyecto
 
@@ -35,16 +35,9 @@ Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el pue
 
 	npm run docker-push -- --tag=<tag>
 
-## Subir la imagen a Docker Hub interno y generar al tag beta asociado a la imagen
-
-	npm run deploy -- --tag=<tag> --beta=<version beta>
-
 
 *ACLARACION*: Durante la ejecución del script se solicitaran usuario y password para loguearse en docker.
 
-Ejemplo:
-		
-	npm run deploy -- --tag=1.0.0 --beta=0
 
 
         
