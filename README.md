@@ -8,7 +8,7 @@ Tener instalado los siguientes programas (las versiones utilizadas son con las q
 - docker (17.05.0-ce)
 - python3 (3.5)
 
-Este proyecto esta armado para conectarse a bases de datos tanto SQL (en este caso vamos a utilizar MySQL) como a Mongo, puede elegir tener una coneccion a una o ambas bases de datos en simultáneo.
+Este proyecto esta armado para conectarse a bases de datos tanto SQL (en este caso vamos a utilizar MySQL) como a Mongo, puede elegir tener una coneccion a una o ambas bases de datos en simultáneo.__
 Como ejemplo de como crear o consultar datos de las bases de datos a través de la api, el proyecto cuenta de un servicio de creacion y de consulta tanto para mongo como para SQL.
 
 ### Pre requisitos para usar MySQL
@@ -65,23 +65,23 @@ Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el pue
 
 Crea Clientes (SQL):
 
-URL: http://localhost:8888/api/clients
-TIPO REQUEST: POST
+URL: http://localhost:8888/api/clients __
+TIPO REQUEST: POST __
 BODY: {	"first_name": "first name", "last_name": "last name"}
 
 Consultar Clientes (SQL):
 
-URL: http://localhost:8888/api/clients
+URL: http://localhost:8888/api/clients __
 TIPO REQUEST: GET
 
 Crear Usuarios (Mongo):
 
-URL: http://localhost:8888/api/users
-TIPO REQUEST: POST
-BODY: {	"first_name": "first name", "last_name": "last name"}
+URL: http://localhost:8888/api/users __
+TIPO REQUEST: POST __
+BODY: {	"first_name": "first name", "last_name": "last name"} 
 
 Consultar Usuarios (Mongo):
 
-URL: http://localhost:8888/api/users
+URL: http://localhost:8888/api/users __
 TIPO REQUEST: GET
 		
