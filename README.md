@@ -61,6 +61,23 @@ Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el pue
 
 	npm run docker-push -- --tag=<tag>
       
-        
+## Consumo de request de ejemplo 
 
+- Crea Clientes (SQL): 
+URL: http://localhost:8888/api/clients
+TIPO REQUEST: POST
+BODY: {	"first_name": "first name", "last_name": "last name"}
+
+- Consultar Clientes (SQL):
+URL: http://localhost:8888/api/clients
+TIPO REQUEST: GET
+
+- Crear Usuarios (Mongo):
+URL: http://localhost:8888/api/users
+TIPO REQUEST: POST
+BODY: {	"first_name": "first name", "last_name": "last name"}
+
+- Consultar Usuarios (Mongo):
+URL: http://localhost:8888/api/users
+TIPO REQUEST: GET
 		
