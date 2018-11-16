@@ -60,20 +60,7 @@ Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el pue
 ## Subir la imagen a Docker Hub
 
 	npm run docker-push -- --tag=<tag>
-
-## Subir la imagen a Docker Hub interno y generar al tag beta asociado a la imagen
-
-	npm run deploy -- --tag=<tag> --beta=<version beta>
-
-
-*ACLARACION*: Durante la ejecución del script se solicitaran usuario y password para loguearse en docker.
-
-Ejemplo:
-		
-	npm run deploy -- --tag=1.0.0 --beta=0
-
-
-        
+      
         
 
 		
