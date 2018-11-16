@@ -24,6 +24,7 @@ Como ejemplo de como crear o consultar datos de las bases de datos a través de 
 
 *NOTA*: El proyecto se va a intentar de conectar con mongo sin user ni password si ya tiene una base de datos segurizada cargue la configuracion en server/database/MongoManager.ts
 
+
 ## Iniciar proyecto
 
 Correr el script de creacion del proyecto
@@ -60,6 +61,8 @@ Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el pue
 ## Subir la imagen a Docker Hub
 
 	npm run docker-push -- --tag=<tag>
+
+*ACLARACION*: Durante la ejecución del script se solicitaran usuario y password para loguearse en docker.
       
 ## Consumo de request de ejemplo 
 
