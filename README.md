@@ -47,6 +47,8 @@ Para levantar el proyecto de manera local ejecute el siguiente comado:
   
 ## Subir la imagen al docker local
 
+*ACLARACIÓN*: Los scripts para generar instancias de docker y para subir la imagen a Docker Hub estan hechos para consolas tipo Linux o MacOS. Si necesita permisos sudo para ejecutar docker, ejecutar los scripts tambien con sudo.
+
 Ejectutar el siguiente script parados en la carpeta del proyecto
  
 	npm run docker-local -- --tag=<tag>
