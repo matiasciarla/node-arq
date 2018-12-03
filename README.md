@@ -8,7 +8,7 @@ Tener instalado los siguientes programas (las versiones utilizadas son con las q
 - docker (17.05.0-ce)
 - python3 (3.5)
 
-Este proyecto esta armado para conectarse a bases de datos tanto SQL (en este caso vamos a utilizar MySQL) como a Mongo, puede elegir tener una coneccion a una o ambas bases de datos en simultáneo.
+Este proyecto esta armado para conectarse a bases de datos tanto SQL (en este caso vamos a utilizar MySQL) como a Mongo, puede elegir tener una coneccion a una o ambas bases de datos en simultáneo. <br />
 Como ejemplo de como crear o consultar datos de las bases de datos a través de la api, el proyecto cuenta de un servicio de creacion y de consulta tanto para mongo como para SQL.
 
 ### Pre requisitos para usar MySQL
@@ -48,6 +48,8 @@ Para levantar el proyecto de manera local ejecute el siguiente comado:
   
 ## Subir la imagen al docker local
 
+*ACLARACIÓN*: Los scripts para generar instancias de docker y para subir la imagen a Docker Hub estan hechos para consolas tipo Linux o MacOS. Si necesita permisos sudo para ejecutar docker, ejecutar los scripts tambien con sudo.
+
 Ejectutar el siguiente script parados en la carpeta del proyecto
  
 	npm run docker-local -- --tag=<tag>
@@ -66,21 +68,25 @@ Esto genera una imagen local en localhost:8888 (asegurarse de tener libre el pue
       
 ## Consumo de request de ejemplo 
 
-- Crea Clientes (SQL): 
-URL: http://localhost:8888/api/clients
-TIPO REQUEST: POST
+Crea Clientes (SQL):
+
+URL: http://localhost:8888/api/clients <br />
+TIPO REQUEST: POST <br />
 BODY: {	"first_name": "first name", "last_name": "last name"}
 
-- Consultar Clientes (SQL):
-URL: http://localhost:8888/api/clients
+Consultar Clientes (SQL):
+
+URL: http://localhost:8888/api/clients <br />
 TIPO REQUEST: GET
 
-- Crear Usuarios (Mongo):
-URL: http://localhost:8888/api/users
-TIPO REQUEST: POST
-BODY: {	"first_name": "first name", "last_name": "last name"}
+Crear Usuarios (Mongo):
 
-- Consultar Usuarios (Mongo):
-URL: http://localhost:8888/api/users
+URL: http://localhost:8888/api/users <br />
+TIPO REQUEST: POST <br />
+BODY: {	"first_name": "first name", "last_name": "last name"} 
+
+Consultar Usuarios (Mongo):
+
+URL: http://localhost:8888/api/users <br />
 TIPO REQUEST: GET
 		
